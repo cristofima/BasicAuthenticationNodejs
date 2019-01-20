@@ -23,7 +23,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
   activity.associate = function(models) {
-    activity.belongsTo(models.user);
+    activity.belongsTo(models.user, {
+      as: "user",
+      foreignKey: "user_id"
+    });
   };
   return activity;
 };

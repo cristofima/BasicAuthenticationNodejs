@@ -13,6 +13,7 @@ function isAuth(req, res, next) {
         if (data) {
           var comp = data.comparePassword(credentials.pass);
           if (comp) {
+            res.locals.user = data;
             next();
           } else {
             notLogin(res);

@@ -5,14 +5,16 @@ function logIn(req, res) {
 }
 
 function signUp(req, res) {
-  let name = req.body.name;
-  let email = req.body.email;
-  let password = req.body.password;
+  var request = {
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password
+  };
 
   return user
-    .create({ name: name, email: email, password: password })
+    .create(request)
     .then(userItem => res.status(201).send(userItem))
-    .catch(error => res.status(400).send(error));
+    .catch(error => res.status(500).send(error));
 }
 
 module.exports = {

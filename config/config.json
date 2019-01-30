@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "12345678",
-    "database": "Notepadd_Node",
-    "host": "127.0.0.1",
+    "username": "jbwzfdojszlzxf",
+    "password": "9d488257706b847cf910a24714d9d276dfb3b4da1176ec1c861813b99ecb1c43",
+    "database": "d5vbj7dgbncoa0",
+    "host": "ec2-54-225-237-84.compute-1.amazonaws.com",
     "dialect": "postgres"
   }
 }
